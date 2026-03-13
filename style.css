@@ -299,8 +299,9 @@ button:hover {
 @media (max-width: 600px) {
 
     #memory-section {
-        padding-left: 12px;
+        padding-left: 6px;
         padding-right: 20px;
     }
 
 }
+
