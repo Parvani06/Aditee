@@ -146,11 +146,11 @@ tiles.forEach((tile, index) => {
         if (tile.classList.contains("letter")) {
 
             let letterMap = {
-                1: "You are one of the softest souls I know.",
-                2: "I’m really grateful you exist in my life.",
-                5: "This year, I hope you chase everything you deserve.",
-                6: "Some memories with you live rent free in my head.",
-                9: "No matter what, I’m always rooting for you."
+                1: "You are one of the softest souls I know (ghante ka soft)",
+                2: "I’m really grateful you exist in my life (I am not)",
+                5: "No matter what, I’m always rooting for you (blah👅)",
+                6: "Some memories with you live rent free in my head👀",
+                9: "Upar ka sab fake tha😁"
             };
 
             const note = letterMap[index];
@@ -232,4 +232,5 @@ function createFlower() {
     setTimeout(() => {
         flower.remove();
     }, 8000);
+
 }
