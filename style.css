@@ -304,7 +304,7 @@ button:hover {
     }
 
     .modal-content {
-        transform: translateX(-8px);
+        transform: translateX(-12px);
     }
 
 }
