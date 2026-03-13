@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fef6fb;
+    color: #5a4e57;
+    text-align: center;
+}
+
+/* Splash */
+
+#splash {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e8, #d6f0ff);
+}
+
+#splash h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.her-name {
+    font-weight: 400;
+    margin-top: -10px;
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+button {
+    padding: 12px 28px;
+    border: none;
+    background: #ffffffaa;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Memory Section */
+
+.hidden {
+    display: none !important;
+}
+
+#memory-section {
+    padding: 30px 20px;
+}
+
+.title {
+    margin-bottom: 25px;
+}
+
+/* Fixed 2-column grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tile {
+    padding: 40px 0;
+    border-radius: 18px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Photo Tile */
+.photo {
+    background: #e6f7ff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Letter Tile */
+.letter {
+    background: #fff0f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tile:hover {
+    transform: translateY(-4px);
+}
+
+/* Modal */
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 18px;
+    padding: 20px;
+    position: relative;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.splash-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.tile {
+    position: relative;
+    overflow: hidden;
+}
+
+.tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    box-shadow: 0 0 0px rgba(255, 182, 193, 0.6);
+    transition: box-shadow 0.4s ease;
+}
+
+.tile:hover::after {
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
+}
+
+.fade-out {
+    animation: fadeOut 0.6s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.letter {
+    position: relative;
+    perspective: 800px;
+}
+
+.letter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #ffc0cb;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    transform-origin: top;
+    transition: transform 0.6s ease;
+}
+
+.letter:hover::before {
+    transform: rotateX(160deg);
+}
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+.ending-trigger {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#final-btn {
+    padding: 14px 32px;
+    font-size: 18px;
+}
+
+#final-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #e6ffe6, #fff9c4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.cinematic-text {
+    font-size: 32px;
+    opacity: 0;
+    animation: textReveal 2s forwards;
+}
+
+@keyframes textReveal {
+    to { opacity: 1; }
+}
+
+#final-polaroid {
+    margin-top: 40px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1.5s ease;
+    position: relative;
+    width: 300px;  /* adjust as needed */
+}
+
+#final-polaroid img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.flower {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: floatFlower 8s linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes floatFlower {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.love-text {
+    position: fixed;          /* fixed relative to viewport */
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: #e75480;
+}

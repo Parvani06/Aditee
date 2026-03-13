@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash">
+        <h1>B'DAYY!!🎉</h1>
+        <h2 class="her-name">Happy Birthday Pandeyy❤</h2>
+        
+        <div class="splash-buttons">
+            <button id="play-music">Play the Beats 🎵</button>
+            <button id="enter-btn">Enter the Party 🎉</button>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music/song.aac" type="audio/aac">
+    </audio>
+
+    <!-- Memory Grid -->
+    <div id="memory-section" class="hidden">
+        <h2 class="title">B'dayy!!</h2>
+
+        <div class="grid">
+            <div class="tile photo">📷</div>
+            <div class="tile letter">💌</div>
+            <div class="tile letter">💌</div>
+            <div class="tile photo">📷</div>
+            <div class="tile photo">📷</div>
+            <div class="tile letter">💌</div>
+            <div class="tile letter">💌</div>
+            <div class="tile photo">📷</div>
+            <div class="tile photo">📷</div>
+            <div class="tile letter">💌</div>
+        </div>
+
+        <div class="ending-trigger">
+            <button id="final-btn">🎁</button>
+        </div>
+    </div>
+
+    <section id="final-section" class="hidden">
+        <div class="cinematic-text">
+            Before the world knew your strength…
+        </div>
+
+        <div class="polaroid hidden" id="final-polaroid">
+            <img src="images/childhood.jpeg" alt="Childhood Memory">
+            <p class="note">
+                You were already someone extraordinary.
+                And you still are. 🌼
+            </p>
+        </div>
+
+        <!-- LOVE SIGN-OFF -->
+        <span class="love-text">..Love you😘</span>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="hidden">
+        <div class="modal-content">
+            <span id="close-btn">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
