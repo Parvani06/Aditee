@@ -191,7 +191,7 @@ tiles.forEach((tile, index) => {
                         text-align:left;
                         animation: slideUp 0.4s ease forwards;
                     ">
-                        <h3>For You ❤️</h3>
+                        <h3>❤️</h3>
                         <p>${note}</p>
                     </div>
                 `;
@@ -234,3 +234,4 @@ function createFlower() {
     }, 8000);
 
 }
+
