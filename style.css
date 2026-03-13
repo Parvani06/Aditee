@@ -299,10 +299,16 @@ button:hover {
 @media (max-width: 600px) {
 
     #memory-section {
-        padding-left: 2px;
+        padding-left: 12px;
         padding-right: 20px;
     }
 
 }
 
+@media (max-width: 600px) {
 
+    .modal-content {
+        transform: translateX(-6px);
+    }
+
+}
