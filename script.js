@@ -148,7 +148,7 @@ tiles.forEach((tile, index) => {
             let letterMap = {
                 1: "You are one of the softest souls I know (ghante ka soft)",
                 2: "I’m really grateful you exist in my life (I am not)",
-                5: "No matter what, I’m always rooting for you (blah👅)",
+                5: "Ae mi khup try kela ha, mala nahi jamat tumko notes likhneka. Bhaad me jao tum (blah👅)",
                 6: "Some memories with you live rent free in my head👀",
                 9: "Upar ka sab fake tha😁"
             };
